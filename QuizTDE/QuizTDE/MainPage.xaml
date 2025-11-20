@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuizTDE.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Frame 
+                BackgroundColor="LightGray" 
+                CornerRadius="10" 
+                Padding="15" 
+                Margin="10" >
+                <VerticalStackLayout>
+                    <Label Text="1. Qual linguagem é utilizada para desenvolvimento mobile multiplataforma?" />
+                    <StackLayout x:Name="RadioGroup1">
+                        <RadioButton Content="JAVA" GroupName="questao1" Value="A" CheckedChanged="RadioButton_CheckedChanged"/>
+                        <RadioButton Content="C#" GroupName="questao1" Value="B" CheckedChanged="RadioButton_CheckedChanged" />
+                        <RadioButton Content="Python" GroupName="questao1" Value="C" CheckedChanged="RadioButton_CheckedChanged"/>
+                        <RadioButton Content="JavaScript" GroupName="questao1" Value="D" CheckedChanged="RadioButton_CheckedChanged"/>
+                    </StackLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame 
+                BackgroundColor="LightGray" 
+                CornerRadius="10" 
+                Padding="15" 
+                Margin="10" >
+                <VerticalStackLayout>
+                    <Label Text="2. O que significa MAUI?"/>
+                    <StackLayout x:Name="RadioGroup2">
+                        <RadioButton Content="Mobile Application User Interface" GroupName="questao2" Value="A" CheckedChanged="RadioButton_CheckedChanged"/>
+                        <RadioButton Content="Multi-platform App UI" GroupName="questao2" Value="B" CheckedChanged="RadioButton_CheckedChanged"/>
+                        <RadioButton Content="Microsoft Application Universal Interface" GroupName="questao2" Value="C" CheckedChanged="RadioButton_CheckedChanged"/>
+                        <RadioButton Content="Modern Application User Interface" GroupName="questao2" Value="D" CheckedChanged="RadioButton_CheckedChanged"/>
+                    </StackLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame 
+                BackgroundColor="LightGray" 
+                CornerRadius="10" 
+                Padding="15" 
+                Margin="10" >
+
+                <VerticalStackLayout>
+                    <Label Text="3. Qual é o padrão de arquitetura mais comum em aplicações MAUI?" />
+                    <StackLayout x:Name="RadioGroup3">
+                        <RadioButton Content="MVC (Model-View-Controller)" GroupName="questao3" Value="A" CheckedChanged="RadioButton_CheckedChanged"/>
+                        <RadioButton Content="MVVM (Model-View-ViewModel)" GroupName="questao3" Value="B" CheckedChanged="RadioButton_CheckedChanged"/>
+                        <RadioButton Content="MVP (Model-View-Presenter)" GroupName="questao3" Value="C" CheckedChanged="RadioButton_CheckedChanged"/>
+                        <RadioButton Content="Sngleton-Pattern" GroupName="questao3" Value="D" CheckedChanged="RadioButton_CheckedChanged"/>
+                    </StackLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame 
+                BackgroundColor="LightGray" 
+                CornerRadius="10" 
+                Padding="15" 
+                Margin="10" >
+
+                <VerticalStackLayout>
+                    <Label Text="4. Qual elemento é usado para criar uma lista rolável de itens?" />
+                    <StackLayout x:Name="RadioGroup4">
+                        <RadioButton Content="StackLayout" GroupName="questao4" Value="A" CheckedChanged="RadioButton_CheckedChanged"/>
+                        <RadioButton Content="Grid" GroupName="questao4" Value="B" CheckedChanged="RadioButton_CheckedChanged"/>
+                        <RadioButton Content="ListView" GroupName="questao4" Value="C" CheckedChanged="RadioButton_CheckedChanged"/>
+                        <RadioButton Content="ScrollView" GroupName="questao4" Value="D" CheckedChanged="RadioButton_CheckedChanged"/>
+                    </StackLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame 
+                BackgroundColor="LightGray" 
+                CornerRadius="10" 
+                Padding="15" 
+                Margin="10" >
+
+                <VerticalStackLayout>
+                    <Label Text="5. Qual propriedade é usada para agrupar RadioButtons?"
+                       TextColor="Black" />
+
+                    <StackLayout x:Name="RadioGroup5">
+                        <RadioButton Content="Group" GroupName="questao5" Value="A" CheckedChanged="RadioButton_CheckedChanged"/>
+                        <RadioButton Content="GroupName" GroupName="questao5" Value="B" CheckedChanged="RadioButton_CheckedChanged"/>
+                        <RadioButton Content="Name" GroupName="questao5" Value="C" CheckedChanged="RadioButton_CheckedChanged"/>
+                        <RadioButton Content="Tag" GroupName="questao5" Value="D" CheckedChanged="RadioButton_CheckedChanged"/>
+                    </StackLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+            <HorizontalStackLayout
+                Margin="10">
+                <Button 
+                    Text="Verificar Respostas"
+                    FontSize="16"
+                    TextColor="White"
+                    BackgroundColor="Green"
+                    Clicked="Button_Clicked_Verificar_Respostas"/>
+
+                <Button 
+                    Text="Reiniciar Quiz"
+                    FontSize="16"
+                    TextColor="White"
+                    BackgroundColor="Green"
+                    Clicked="Button_Clicked_Reiniciar_Quiz"/>
+            </HorizontalStackLayout>
+
+            <Frame>
+                <VerticalStackLayout>
+                    <Label x:Name="txPontuacao"/>
+                    <Label x:Name="txMensagemResposta"/>
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
