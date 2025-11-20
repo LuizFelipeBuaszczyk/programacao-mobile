@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DistanciaEntrePontos.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Image Source="bhaskaraf.png" Aspect="AspectFit"/>
+            <Label Text="Digite o valor para A"/>
+            <HorizontalStackLayout>
+                <Entry x:Name="txValorAx"
+                    Keyboard="Numeric"
+                    MaxLength="10"
+                    WidthRequest="100"
+                    Placeholder="1"
+                    HorizontalOptions="Start"/>
+                <Entry x:Name="txValorAy"
+                    Keyboard="Numeric"
+                    MaxLength="10"
+                    WidthRequest="100"
+                    Placeholder="1"
+                    HorizontalOptions="Start"/>
+                <Entry x:Name="txValorAz"
+                    Keyboard="Numeric"
+                    MaxLength="10"
+                    WidthRequest="100"
+                    Placeholder="1"
+                    HorizontalOptions="Start"/>
+            </HorizontalStackLayout>
+
+
+            <Label Text="Digite o valor para B"/>
+            <HorizontalStackLayout>
+                <Entry x:Name="txValorBx"
+                    Keyboard="Numeric"
+                    MaxLength="10"
+                    WidthRequest="100"
+                    Placeholder="1"
+                    HorizontalOptions="Start"/>
+                <Entry x:Name="txValorBy"
+                    Keyboard="Numeric"
+                    MaxLength="10"
+                    WidthRequest="100"
+                    Placeholder="1"
+                    HorizontalOptions="Start"/>
+                <Entry x:Name="txValorBz"
+                    Keyboard="Numeric"
+                    MaxLength="10"
+                    WidthRequest="100"
+                    Placeholder="1"
+                    HorizontalOptions="Start"/>
+            </HorizontalStackLayout>
+
+            <Button x:Name="btCalcularDistanciaEntrePontos"
+                Text="Calcular"
+                Clicked="btCalcularDistanciaEntrePontos_Clicked"
+                WidthRequest="200"
+                Margin="10,0,0,10"/>
+
+            <Entry x:Name="txValorDistancia"              
+                Keyboard="Numeric"
+                MaxLength="10"
+                WidthRequest="100"
+                HorizontalOptions="Start"
+                IsEnabled="False"/>
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>
