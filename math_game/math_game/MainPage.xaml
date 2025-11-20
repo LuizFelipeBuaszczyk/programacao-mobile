@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="math_game.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="50.0" Spacing="25">
+            <Label Text="JOGO MATEMÁTICO"
+                   FontSize="32"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"/>
+
+            <Image Source="mathlogo.png"
+                   Aspect="Center"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+
+            <Label Text="Resolva o Desafio Matemático"
+                   FontSize="18"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"/>
+
+            
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <VerticalStackLayout Spacing="5" HorizontalOptions="Start" VerticalOptions="Center">
+                    <Label FontSize="18" Text="Pontos"/>
+                    <Label x:Name="lbPontos" FontSize="30" Text="0"/>
+                </VerticalStackLayout>
+                <VerticalStackLayout Spacing="5" HorizontalOptions="Start" VerticalOptions="Center">
+                    <Label FontSize="18" Text="Questão"/>
+                    <Label x:Name="lbQuestao" FontSize="30" Text="1/10"/>
+                </VerticalStackLayout>
+                <VerticalStackLayout Spacing="5" HorizontalOptions="Start" VerticalOptions="Center">
+                    <Label FontSize="18" Text="Tempo"/>
+                    <Label x:Name="lbTempo" FontSize="30" Text="30s"/>
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+
+            <Picker x:Name="pkNivelDificuldade"
+                    Title="Nível Dificuldade">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Facil (1-10)</x:String>
+                        <x:String>Médio (1-50)</x:String>
+                        <x:String>Difícil (1-100)</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Operações:"
+                   FontSize="18"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Center"/>
+
+
+            <HorizontalStackLayout>
+                <VerticalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Adição (+)" VerticalOptions="Center" HorizontalOptions="Start"/>
+                        <CheckBox x:Name="cbAdicao"
+                            AutomationId="cbAdicao"
+                            IsChecked="False"
+                            Color="Green"
+                            CheckedChanged="cb_CheckedChanged" />
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Subtração (-)" VerticalOptions="Center" HorizontalOptions="Start"/>
+                        <CheckBox x:Name="cbSubt"
+                            AutomationId="cbSubt"
+                            IsChecked="False"
+                            Color="Green"
+                            CheckedChanged="cb_CheckedChanged" />
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Multiplicação (*)" VerticalOptions="Center" HorizontalOptions="Start"/>
+                        <CheckBox x:Name="cbMulti"
+                            AutomationId="cbMulti"
+                            IsChecked="False"
+                            Color="Green"
+                            CheckedChanged="cb_CheckedChanged" />
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Divisão (/)" VerticalOptions="Center" HorizontalOptions="Start"/>
+                        <CheckBox x:Name="cbDiv"
+                            AutomationId="cbDiv"
+                            IsChecked="False"
+                            Color="Green"
+                            CheckedChanged="cb_CheckedChanged" />
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+
+            <Button x:Name="btIniciarJogo" Text="INICIAR JOGO" Clicked="btIniciarJogo_Clicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

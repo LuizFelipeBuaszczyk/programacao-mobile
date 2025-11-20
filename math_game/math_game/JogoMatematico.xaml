@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="math_game.JogoMatematico">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="50.0" Spacing="25">
+            <Label Text="JOGO MATEMÁTICO"
+                   FontSize="32"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"/>
+
+            <Image Source="mathlogo.png"
+                   Aspect="Center"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+
+            <Label Text="Resolva o Desafio Matem�tico"
+                   FontSize="18"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"/>
+
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <VerticalStackLayout Spacing="5" HorizontalOptions="Start" VerticalOptions="Center">
+                    <Label FontSize="18" Text="Pontos"/>
+                    <Label x:Name="lbPontos" FontSize="30" Text="0"/>
+                </VerticalStackLayout>
+                <VerticalStackLayout Spacing="5" HorizontalOptions="Start" VerticalOptions="Center">
+                    <Label FontSize="18" Text="Quest�o"/>
+                    <Label x:Name="lbQuestao" FontSize="30" Text="1/10"/>
+                </VerticalStackLayout>
+                <VerticalStackLayout Spacing="5" HorizontalOptions="Start" VerticalOptions="Center">
+                    <Label FontSize="18" Text="Tempo"/>
+                    <Label x:Name="lbTempo" FontSize="30" Text="30s"/>
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Label x:Name="lb1" FontSize="30" Text="5"/>
+                <Label x:Name="lb2" FontSize="30" Text="X"/>
+                <Label x:Name="lb3" FontSize="30" Text="5"/>
+            </HorizontalStackLayout>
+
+            <Entry x:Name="txR" Placeholder="Digite a resposta aqui..."
+                   Keyboard="Numeric"/>
+
+            <Button x:Name="btOK" Text="OK" Clicked="btOK_Clicked"/>
+
+            <Image x:Name="imR"
+                   Source="question.png"
+                   Aspect="Center"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Label x:Name="lbAcertos" FontSize="30" Text="Acertos: 0"/>
+                <Label x:Name="lbErros" FontSize="30" Text="Erros: 0"/>
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
