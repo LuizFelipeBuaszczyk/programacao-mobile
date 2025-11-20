@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Baskara.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Image Source="bhaskaraf.png" Aspect="AspectFit"/> 
+            <Label Text="Digite o valor para a" 
+                Style="{StaticResource LabelSimples}"/>
+            <Entry x:Name="txValorA"
+                Keyboard="Numeric"
+                MaxLength="10"
+                WidthRequest="100"
+                Placeholder="1"
+                HorizontalOptions="Start"/>
+
+            <Label Text="Digite o valor para b" 
+                Style="{StaticResource LabelSimples}"/>
+            <Entry x:Name="txValorB"
+                Keyboard="Numeric"
+                MaxLength="10"
+                WidthRequest="100"
+                Placeholder="2"
+                HorizontalOptions="Start"/>
+
+            <Label Text="Digite o valor para c"
+                Style="{StaticResource LabelSimples}"/>
+            <Entry x:Name="txValorC"
+                Keyboard="Numeric"
+                MaxLength="10"
+                WidthRequest="100"
+                Placeholder="-15"
+                HorizontalOptions="Start"/>
+
+            <Button x:Name="btCalcularBhaskara"
+                Text="Calcular"
+                Clicked="btCalcularBhaskara_Clicked"
+                WidthRequest="200"
+                Margin="10,0,0,10"/>    
+
+            <Entry x:Name="txValorx1"              
+                Keyboard="Numeric"
+                MaxLength="10"
+                WidthRequest="100"
+                HorizontalOptions="Start"
+                IsEnabled="False"/>
+            <Entry x:Name="txValorx2"              
+                Keyboard="Numeric"
+                MaxLength="10"
+                WidthRequest="100"
+                HorizontalOptions="Start"
+                IsEnabled="False"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
